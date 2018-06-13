@@ -5,10 +5,10 @@
     {:name "Eclipse Public License"
      :url "https://opensource.org/licenses/EPL-1.0"}
   :dependencies [
-    [com.taoensso/carmine "2.16.0"]
-    [org.clojure/clojure "1.8.0"]
-    [org.clojure/tools.logging "0.4.0"]
-    [ring/ring-core "1.6.2"]]
+    [com.taoensso/carmine "2.18.1"]
+    [org.clojure/clojure "1.9.0"]
+    [org.clojure/tools.logging "0.4.1"]
+    [ring/ring-core "1.6.3"]]
   :profiles {
     :uber {
       :aot :all}
@@ -17,12 +17,11 @@
       :repl-options {
         :init-ns ring.redis.session.dev}}
     :test {
-      :exclusions [org.clojure/clojure]
       :dependencies [
         [org.clojure/tools.namespace "0.2.11"]]
       :plugins [
         [jonase/eastwood "0.2.4"]
-        [lein-ancient "0.6.10"]
+        [lein-ancient "0.6.15"]
         [lein-bikeshed "0.4.1"]
         [lein-kibit "0.1.5"]
         [lein-shell "0.5.0"]
@@ -30,11 +29,11 @@
     :1.5 {
       :dependencies [
         [org.clojure/clojure "1.5.0"]
-        [medley "0.6.0" :exclusions [org.clojure/clojure]]]}
+        [medley "1.0.0" :exclusions [org.clojure/clojure]]]}
     :1.6 {
       :dependencies [
         [org.clojure/clojure "1.6.0"]
-        [medley "0.6.0" :exclusions [org.clojure/clojure]]]}
+        [medley "1.0.0" :exclusions [org.clojure/clojure]]]}
     :1.7 {
       :dependencies [
         [org.clojure/clojure "1.7.0"]]}
@@ -43,7 +42,7 @@
         [org.clojure/clojure "1.8.0"]]}
     :1.9 {
       :dependencies [
-        [org.clojure/clojure "1.9.0-alpha14"]]}
+        [org.clojure/clojure "1.9.0"]]}
     :docs {
       :exclusions [org.clojure/clojure]
       :dependencies [
