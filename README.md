@@ -160,7 +160,7 @@ License
 
 Copyright © 2013 Zhe Wu <wu@madk.org>
 
-Copyright © 2016-2017 Clojure-Aided Enrichment Center
+Copyright © 2016-2018 Clojure-Aided Enrichment Center
 
 Distributed under the Eclipse Public License, the same as Clojure.
 
