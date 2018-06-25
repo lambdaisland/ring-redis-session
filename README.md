@@ -32,6 +32,16 @@ and the only Redis session store available ([rrss][rrss]) ... didn't.
 Important Changes
 -----------------
 
+* **3.3.0-SNAPSHOT**
+  - Data serialization now happens with default for
+    `com.taoensso/carmine` `nippy` library because original
+    serialization method was based on deprecated `eval` read macro `#=`;
+
+  - `read-handler` and `:write-handler` options added to constructor
+    which can be used to define custom data serialization format. See example in
+    [Customize data serialization format](#customize-data-serialization-format) section.
+
+
 * **v3.1.0** - This release has changed the repo name, project name, and release
   name from `clj-redis-session` to `ring-redis-session` (thanks @plexus for the
   great suggestion!)
@@ -48,7 +58,7 @@ Installation
 
 Add
 ```clojure
-[clojusc/ring-redis-session "3.2.0"]
+[clojusc/ring-redis-session "3.3.0-SNAPSHOT"]
 ```
 to `:dependencies` in your `project.clj`.
 
@@ -116,6 +126,33 @@ something else:
 
 ```clj
 (wrap-session your-app {:store (redis-store conn {:prefix "your-app-prefix"})})
+```
+
+## Customize data serialization format
+
+The format of how data will be kept in Redis storage could be defined
+with `:read-handler`, `:write-handler` functions passed to
+constructor.
+
+This example shows how to set handlers to store data in `transit` format:
+
+```clojure
+  (defn to-str [obj]
+    (let [string-writer  (ByteArrayOutputStream.)
+          transit-writer (transit/writer string-writer :json)]
+      (transit/write transit-writer obj)
+      (.toString string-writer)))
+
+  (defn from-str [str]
+    (let [string-reader  (ByteArrayInputStream. (.getBytes str))
+          transit-reader (transit/reader string-reader :json)]
+      (transit/read transit-reader)))
+
+  ...
+
+  (session/wrap-session handler {:store (redis-store redis-conn
+                                         {:read-handler #(some-> % from-str)
+                                          :write-handler #(some-> % to-str)})})
 ```
 
 
