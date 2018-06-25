@@ -2,7 +2,6 @@ ring-redis-session
 ==================
 
 [![Build Status][travis-badge]][travis]
-[![Dependencies Status][deps-badge]][deps]
 [![Clojars Project][clojars-badge]][clojars]
 [![Tag][tag-badge]][tag]
 [![JDK version][jdk-v]](.travis.yml)
