@@ -176,7 +176,7 @@ Distributed under the Eclipse Public License, the same as Clojure.
 [deps-badge]: http://jarkeeper.com/clojusc/ring-redis-session/status.svg
 [tag-badge]: https://img.shields.io/github/tag/clojusc/ring-redis-session.svg
 [tag]: https://github.com/clojusc/ring-redis-session/tags
-[clojure-v]: https://img.shields.io/badge/clojure-1.8.0-blue.svg
+[clojure-v]: https://img.shields.io/badge/clojure-1.9.0-blue.svg
 [jdk-v]: https://img.shields.io/badge/jdk-1.7+-blue.svg
 [clojars]: https://clojars.org/clojusc/ring-redis-session
 [clojars-badge]: https://img.shields.io/clojars/v/clojusc/ring-redis-session.svg
