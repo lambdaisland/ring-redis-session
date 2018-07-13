@@ -1,5 +1,4 @@
-ring-redis-session
-==================
+# ring-redis-session
 
 [![Build Status][travis-badge]][travis]
 [![Clojars Project][clojars-badge]][clojars]
@@ -11,59 +10,42 @@ ring-redis-session
 
 *A Redis backed Clojure/Ring session store*
 
+**Contents**
 
-What is it?
------------
+* About
+* Installation
+* Usage
+* Release Notes
+* Donating
+* License
+
+
+## About
+
+### What is it?
 
 `ring-redis-session` uses redis as a Clojure/Ring's HTTP session
 storage engine. What makes it different is its support for
 hierarchical data, actually any `*print-str*`able clojure data types.
 
 
-Why?
-----
+### Why?
 
 The reason `ring-redis-session` was written was that there was a need for
 a Redis-backed session store that supported hierarchical data structures,
 and the only Redis session store available ([rrss][rrss]) ... didn't.
 
 
-Important Changes
------------------
+## Installation
 
-* **3.3.0-SNAPSHOT**
-  - Data serialization now happens with default for
-    `com.taoensso/carmine` `nippy` library because original
-    serialization method was based on deprecated `eval` read macro `#=`;
-
-  - `read-handler` and `:write-handler` options added to constructor
-    which can be used to define custom data serialization format. See example in
-    [Customize data serialization format](#customize-data-serialization-format) section.
-
-
-* **v3.1.0** - This release has changed the repo name, project name, and release
-  name from `clj-redis-session` to `ring-redis-session` (thanks @plexus for the
-  great suggestion!)
-
-* **v3.0.0** - This release introduces a breaking change in the API. Whereas
-  prior to this release on used `ring-redis-session.core`, one now has to use
-  `ring.redis.session`. If this is a problem for your project, simply ensure
-  that you depend upon a version prior to the v3.0.0 release -- all of which
-  uphold the old API.
-
-
-Installation
-------------
-
-Add
+Add:
 ```clojure
 [clojusc/ring-redis-session "3.3.0-SNAPSHOT"]
 ```
 to `:dependencies` in your `project.clj`.
 
 
-Usage
------
+## Usage
 
 If you need it, documentation is [here][docs].
 
@@ -127,7 +109,7 @@ something else:
 (wrap-session your-app {:store (redis-store conn {:prefix "your-app-prefix"})})
 ```
 
-## Customize data serialization format
+### Customize data serialization format
 
 The format of how data will be kept in Redis storage could be defined
 with `:read-handler`, `:write-handler` functions passed to
@@ -155,8 +137,41 @@ This example shows how to set handlers to store data in `transit` format:
 ```
 
 
-License
--------
+## Release Notes
+
+* **3.3.0-SNAPSHOT**
+  - Data serialization now happens with default for
+    `com.taoensso/carmine` `nippy` library because original
+    serialization method was based on deprecated `eval` read macro `#=`;
+
+  - `read-handler` and `:write-handler` options added to constructor
+    which can be used to define custom data serialization format. See example in
+    [Customize data serialization format](#customize-data-serialization-format) section.
+
+
+* **v3.1.0** - This release has changed the repo name, project name, and release
+  name from `clj-redis-session` to `ring-redis-session` (thanks @plexus for the
+  great suggestion!)
+
+* **v3.0.0** - This release introduces a breaking change in the API. Whereas
+  prior to this release on used `ring-redis-session.core`, one now has to use
+  `ring.redis.session`. If this is a problem for your project, simply ensure
+  that you depend upon a version prior to the v3.0.0 release -- all of which
+  uphold the old API.
+
+
+## Donating
+
+A donation account for supporting development on this project has been set up
+on Liberapay here:
+
+* [https://liberapay.com/clojusc-ring-redis-session/donate](https://liberapay.com/clojusc-ring-redis-session/donate)
+
+You can learn more about Liberapay on its [Wikipedia entry][libera-wiki] or on the
+service's ["About" page][libera-about].
+
+
+## License
 
 Copyright © 2013 Zhe Wu <wu@madk.org>
 
@@ -181,3 +196,5 @@ Distributed under the Eclipse Public License, the same as Clojure.
 [clojars]: https://clojars.org/clojusc/ring-redis-session
 [clojars-badge]: https://img.shields.io/clojars/v/clojusc/ring-redis-session.svg
 [docs]: https://clojusc.github.io/ring-redis-session/current/
+[libera-wiki]: https://en.wikipedia.org/wiki/Liberapay
+[libera-about]: https://liberapay.com/about/
