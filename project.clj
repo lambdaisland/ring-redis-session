@@ -6,7 +6,7 @@
      :url "https://opensource.org/licenses/EPL-1.0"}
   :dependencies [
     [com.taoensso/carmine "2.18.1"]
-    [org.clojure/clojure "1.9.0"]
+    [org.clojure/clojure "1.10.3"]
     [org.clojure/tools.logging "0.4.1"]
     [ring/ring-core "1.6.3"]]
   :profiles {
@@ -20,12 +20,12 @@
       :dependencies [
         [org.clojure/tools.namespace "0.2.11"]]
       :plugins [
-        [jonase/eastwood "0.2.4"]
-        [lein-ancient "0.6.15"]
-        [lein-bikeshed "0.4.1"]
-        [lein-kibit "0.1.5"]
+        [jonase/eastwood "0.9.9"]
+        [lein-ancient "1.0.0-RC3"]
+        [lein-bikeshed "0.5.2"]
+        [lein-kibit "0.1.8"]
         [lein-shell "0.5.0"]
-        [venantius/yagni "0.1.4"]]}
+        [venantius/yagni "0.1.7"]]}
     :1.5 {
       :dependencies [
         [org.clojure/clojure "1.5.0"]
@@ -43,6 +43,10 @@
     :1.9 {
       :dependencies [
         [org.clojure/clojure "1.9.0"]]}
+    :1.10 {
+      :dependencies [
+        [org.clojure/clojure "1.10.3"]]}
+
     :docs {
       :exclusions [org.clojure/clojure]
       :dependencies [
