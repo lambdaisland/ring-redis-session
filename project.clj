@@ -5,10 +5,10 @@
     {:name "Eclipse Public License"
      :url "https://opensource.org/licenses/EPL-1.0"}
   :dependencies [
-    [com.taoensso/carmine "2.18.1"]
+    [com.taoensso/carmine "3.1.0"]
     [org.clojure/clojure "1.10.3"]
-    [org.clojure/tools.logging "0.4.1"]
-    [ring/ring-core "1.6.3"]]
+    [org.clojure/tools.logging "1.1.0"]
+    [ring/ring-core "1.9.4"]]
   :profiles {
     :uber {
       :aot :all}
@@ -18,7 +18,7 @@
         :init-ns ring.redis.session.dev}}
     :test {
       :dependencies [
-        [org.clojure/tools.namespace "0.2.11"]]
+        [org.clojure/tools.namespace "1.1.0"]]
       :plugins [
         [jonase/eastwood "0.9.9"]
         [lein-ancient "1.0.0-RC3"]
@@ -29,11 +29,11 @@
     :1.5 {
       :dependencies [
         [org.clojure/clojure "1.5.0"]
-        [medley "1.0.0" :exclusions [org.clojure/clojure]]]}
+        [medley "1.3.0" :exclusions [org.clojure/clojure]]]}
     :1.6 {
       :dependencies [
         [org.clojure/clojure "1.6.0"]
-        [medley "1.0.0" :exclusions [org.clojure/clojure]]]}
+        [medley "1.3.0" :exclusions [org.clojure/clojure]]]}
     :1.7 {
       :dependencies [
         [org.clojure/clojure "1.7.0"]]}
