@@ -21,8 +21,8 @@ jobs:
           distribution: 'adopt'
           java-version: ${{ matrix.java }} 
       - name: Install dependencies
-        run: lein with-profile ${{ matrix.clojure }} deps
+        run: lein with-profile +${{ matrix.clojure }} deps
       - name: Combile
-        run: lein with-profile ${{ matrix.clojure }} compile
+        run: lein with-profile +${{ matrix.clojure }} compile
       - name: Uberjar
-        run: lein with-profile ${{ matrix.clojure }} uberjar
+        run: lein with-profile +${{ matrix.clojure }} uberjar
