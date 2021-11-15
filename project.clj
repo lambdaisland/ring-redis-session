@@ -29,10 +29,12 @@
     :1.5 {
       :dependencies [
         [org.clojure/clojure "1.5.0"]
+        [com.taoensso/carmine "2.20.0"]
         [medley "1.3.0" :exclusions [org.clojure/clojure]]]}
     :1.6 {
       :dependencies [
         [org.clojure/clojure "1.6.0"]
+        [com.taoensso/carmine "2.20.0"]
         [medley "1.3.0" :exclusions [org.clojure/clojure]]]}
     :1.7 {
       :dependencies [
