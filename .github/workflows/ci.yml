@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        java: [ '7', '8', '11', '13', '15' ]
+        java: [ '8', '11', '13', '15' ]
         clojure: [ '1.5', '1.6', '1.7', '1.8', '1.9' ]
     name: Build with Clojure ${{ matrix.clojure }} on Java ${{ matrix.Java }}
     steps:
