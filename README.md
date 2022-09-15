@@ -1,9 +1,9 @@
 # ring-redis-session
 
-[![Build Status][travis-badge]][travis]
+[![Build Status][github-badge]][github]
 [![Clojars Project][clojars-badge]][clojars]
 [![Tag][tag-badge]][tag]
-[![JDK version][jdk-v]](.travis.yml)
+[![JDK version][jdk-v]](.github/workflows/ci.yml)
 [![Clojure version][clojure-v]](project.clj)
 
 [![Project Logo][logo]][logo-large]
@@ -180,8 +180,8 @@ Copyright © 2016-2018 Clojure-Aided Enrichment Center
 Distributed under the Eclipse Public License, the same as Clojure.
 
 
-[travis]: https://travis-ci.org/clojusc/ring-redis-session
-[travis-badge]: https://travis-ci.org/clojusc/ring-redis-session.png?branch=dev
+[github]: https://github.com/clojusc/ring-redis-session/actions
+[github-badge]: https://github.com/clojusc/ring-redis-session/workflows/CI/badge.svg
 [logo]: resources/images/redis-logo-small.png
 [logo-large]: resources/images/redis-logo.png
 [rrss]: https://github.com/paraseba/rrss
@@ -191,8 +191,8 @@ Distributed under the Eclipse Public License, the same as Clojure.
 [deps-badge]: http://jarkeeper.com/clojusc/ring-redis-session/status.svg
 [tag-badge]: https://img.shields.io/github/tag/clojusc/ring-redis-session.svg
 [tag]: https://github.com/clojusc/ring-redis-session/tags
-[clojure-v]: https://img.shields.io/badge/clojure-1.9.0-blue.svg
-[jdk-v]: https://img.shields.io/badge/jdk-1.7+-blue.svg
+[clojure-v]: https://img.shields.io/badge/clojure-1.10.3-blue.svg
+[jdk-v]: https://img.shields.io/badge/jdk-1.8+-blue.svg
 [clojars]: https://clojars.org/clojusc/ring-redis-session
 [clojars-badge]: https://img.shields.io/clojars/v/clojusc/ring-redis-session.svg
 [docs]: https://clojusc.github.io/ring-redis-session/current/
