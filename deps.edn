@@ -11,13 +11,10 @@
   :test {:extra-deps {org.clojure/tools.namespace {:mvn/version "1.5.0"}}
          :main-opts ["-e" "(clojure.test/run-tests)"]}
 
-  :docs {:extra-deps {codox-theme-rdash {:mvn/version "0.1.2"}}
-         :main-opts ["-m" "codox.main" "-o" "docs/current" "-n" "ring.redis.session"]}
-
   :lint {:main-opts ["-m" "clj-kondo.core/run" "-c" ".clj-kondo/config.edn" "--lint" "src"]}
 
   :check-deps {:main-opts ["-m" "antq.core"]}
 
   :kibit {:main-opts ["-m" "jonase.kibit/check"]}
 
-  :outlaw {:main-opts ["-m" "eastwood.lint/eastwood" "{:namespaces [:source-paths] :source-paths [\"src\"]}"]}}
+  :outlaw {:main-opts ["-m" "eastwood.lint/eastwood" "{:namespaces [:source-paths] :source-paths [\"src\"]}"]}}}
