@@ -24,13 +24,13 @@ hierarchical data, actually any `*print-str*`able clojure data types.
 To use the latest release, add the following to your `deps.edn` ([Clojure CLI](https://clojure.org/guides/deps_and_cli))
 
 ```
-com.lambdaisland/ring-redis-session {:mvn/version "4.0.2"}
+com.lambdaisland/ring-redis-session {:mvn/version "3.4.126"}
 ```
 
 or add the following to your `project.clj` ([Leiningen](https://leiningen.org/))
 
 ```
-[com.lambdaisland/ring-redis-session "4.0.2"]
+[com.lambdaisland/ring-redis-session "3.4.126"]
 ```
 <!-- /installation -->
 
