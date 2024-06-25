@@ -1,0 +1,9 @@
+#!/usr/bin/env bb
+
+(ns proj (:require [lioss.main :as lioss]))
+
+(lioss/main
+ {:license        :epl
+  :group-id       "com.lambdaisland"
+  :inception-year 2011
+  :description    "Redis session store, originally clj-redis-session by sritchie."})

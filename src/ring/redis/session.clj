@@ -1,9 +1,10 @@
 (ns ring.redis.session
   "Redis session storage."
-  (:require [clojure.tools.logging :as log]
-            [ring.middleware.session.store :as api]
-            [ring.redis.session.util :as util]
-            [taoensso.carmine :as redis]))
+  (:require
+   [clojure.tools.logging :as log]
+   [ring.middleware.session.store :as api]
+   [ring.redis.session.util :as util]
+   [taoensso.carmine :as redis]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Method implementations   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

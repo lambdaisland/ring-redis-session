@@ -1,7 +1,8 @@
 (ns ring.redis.session-test
-  (:require [clojure.test :refer [deftest is]]
-            [ring.redis.session :as rs]
-            [ring.middleware.session.store :as ring-store]))
+  (:require
+   [clojure.test :refer [deftest is]]
+   [ring.redis.session :as rs]
+   [ring.middleware.session.store :as ring-store]))
 
 (def conn {:pool {}
            :spec {:host "127.0.0.1"
